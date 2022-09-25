@@ -1,0 +1,12 @@
+DC_motor    KEYWORD1
+setMotorDriverPins    KEYWORD2
+setEncoderPins    KEYWORD2
+setPPR    KEYWORD2
+setRR    KEYWORD2
+countPulses    KEYWORD2
+run    KEYWORD2
+startCounting    KEYWORD2
+getRotations    KEYWORD2
+getDegrees    KEYWORD2
+stopCounting    KEYWORD2
+stop    KEYWORD2
