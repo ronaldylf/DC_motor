@@ -21,7 +21,7 @@ class DC_motor{
     void setRR(float rr);           // Reduction ratio
 
     void countPulses();
-    void run(byte pwm);     // Aplica o pwm no motor
+    void run(int pwm);     // Aplica o pwm no motor
 
     void startCounting();   // Inicia a contagem de rotações
     float getRotations();   // Retorna o número de rotações acumulado

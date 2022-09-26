@@ -60,7 +60,9 @@ void DC_motor::stopCounting() {
     startCounting();
 }
 
-void DC_motor::run(byte pwm) {
+void DC_motor::run(int pwm) {
+    if(pwm > 255) pwm = 255;
+    if(pwm < -255) pwm = -255;
     if (pwm>0) {
         digitalWrite(in1, HIGH);
         digitalWrite(in2, LOW);
@@ -72,7 +74,7 @@ void DC_motor::run(byte pwm) {
         digitalWrite(in2, LOW);
     }
 
-    analogWrite(en, pwm);
+    analogWrite(en, abs(pwm));
 }
 
 void DC_motor::stop(int time=50) {
