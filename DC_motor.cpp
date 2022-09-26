@@ -40,10 +40,6 @@ void DC_motor::setRR(float rr) {
     this->pp_rot = this->pp_rev * this->rr;
 }
 
-void DC_motor::startCounting();   // Inicia a contagem de rotações
-    float getRotations();   // Retorna o número de rotações acumulado
-    float getDegrees();     // Retorna os graus acumulados
-    void stopCounting();    // Para a contagem de rotações
 
 void DC_motor::startCounting() {
     pulses[1] = 0;
@@ -51,7 +47,7 @@ void DC_motor::startCounting() {
 }
 
 float DC_motor::getRotations() {
-    total_rot = (1.0 / pp_rot) * pulses[1];
+    total_rot = pulses[1] / pp_rot;
     return total_rot;
 }
 
