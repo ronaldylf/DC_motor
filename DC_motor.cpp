@@ -80,5 +80,5 @@ void DC_motor::run(int pwm) {
 void DC_motor::stop(int time=50) {
     digitalWrite(in1, LOW);
     digitalWrite(in2, LOW);
-    analogWrite(en, LOW);
+    delay(time);
 }
